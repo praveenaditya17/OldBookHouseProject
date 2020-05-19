@@ -1,0 +1,41 @@
+.invoice-area{
+    padding: 3rem;
+    margin-top: 13rem;
+}
+.content{
+    margin-left: 3rem;
+}
+b{
+    font: 1em sans-serif;
+    font-size: large;
+}
+td{
+    font: 1em sans-serif;
+    font-size: large;
+}
+h4{
+    font: 1em sans-serif;
+    font-size: large;
+}
+img{
+    width: 40%;
+    height: auto;
+    margin-left: 1rem;
+    float: left;
+    display: block;
+}
+.downloadButton{
+    float: right;
+    margin-right: 12rem;
+    padding: 7px;
+    color: black;
+
+}
+td{
+    font: 1em sans-serif;
+    font-size: large;
+    text-align: center;
+}
+th{
+    text-align: center;
+}

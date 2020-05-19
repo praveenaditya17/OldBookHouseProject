@@ -1,0 +1,40 @@
+
+#regBody{
+    background-color: #ddd;
+    margin-top: 11rem;
+    box-shadow: 1px 1px #ddd, 0em 0 0.4em 
+}
+
+.button-row{
+    padding: 2%;
+    text-align: center;
+}
+.button-row button{
+    margin: 0.5rem;
+}
+.hide{
+    display: none;
+}
+
+#regButton{
+    width: 32%;
+    color: #fec239;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    font-family: sans-serif
+}
+#regButtonClear{
+    width: 32%;
+    background-color: #fec239;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    font-family: sans-serif
+}
+#regHeader{
+    background-color: #fec239;
+}
+#status{
+    padding: 1rem;
+}

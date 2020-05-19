@@ -1,0 +1,95 @@
+<app-header></app-header>
+<div class="invoice-area">
+    <div>
+        <input class="downloadButton" type="button" value="Download PDF" (click)="convetToPDF()"/>
+    </div>
+    <div  class="col-sm-12">
+        <div class="col-sm-4">
+            <div class="content">
+                <h3>Old Book House</h3>
+                <p><span>10th Floor,DLF Cybercity, Infocity Square</span>
+				Patia, Bhubaneswar - 751024
+			    </p>
+            </div>
+        </div>
+        <div class="col-sm-4 ">
+        </div>
+        <div class="col-sm-4">
+            <div class="content">
+                <h2>INVOICE</h2>
+            </div>
+           
+            <div>
+                <img src="../../assets/logo (2).png">
+            </div>
+        </div>
+    </div>
+    <div  class="col-sm-12">
+        <div class="col-sm-4">
+            <div class="content">
+                <h3>BILL TO</h3>
+            <hr>
+            <h4>{{invoiceData[0][0]}} {{invoiceData[0][1]}}</h4>
+            <p>{{invoiceData[0][3]}} , {{invoiceData[0][4]}}</p>
+            <p>{{invoiceData[0][5]}} - {{invoiceData[0][6]}}</p>
+            <p>+91 {{invoiceData[0][2]}}</p>
+            </div>
+            
+        </div>
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-4">
+            <div class="content">
+                <br>
+                <br>
+                <h4>Invoice No.:{{invoiceData[0][13]}}</h4>
+                <h4>Invoice date: {{invoiceData[0][12]}}</h4>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-sm-12">
+        <br>
+        <br>
+        <div class="container">            
+            <table class="table table-bordered" id="contentToConvert">
+                <thead>
+                    <tr><th colspan="4">Old Book House Product Details</th></tr>
+                    <tr>
+                        <th>BOOK NAME</th>
+                        <th>QTY</th>
+                        <th>UNIT PRICE</th>
+                        <th>TOTAL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let invice of invoiceData;let i of index">
+                        <td>{{invice[9]}}</td>
+                        <td>{{invice[10]}}</td>
+                        <td>{{invice[11]}}</td>
+                        <td>{{invice[10]*invice[11]}}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Sub Total</b></td>
+                        <td><b>₹ {{total}}</b></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Shipping Charge</b></td>
+                        <td><b>₹ 60</b></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Deu Balance</b></td>
+                        <td><b>₹ {{total+60}}</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>          
+    </div>
+</div>

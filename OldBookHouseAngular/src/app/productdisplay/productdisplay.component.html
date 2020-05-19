@@ -1,0 +1,119 @@
+<div class="fluid-container productdisplaywrap"> 
+    <div class="col-sm-3">
+        <div class="productlist catagory1">
+            <div class="subccatagory1 catagory-type1">Top Catagory</div>
+            <div class="subccatagory1 catagory-book top-catagory"><a (click)="searchCatogory('science')">Science</a></div>
+            <div class="subccatagory1 catagory-book" ><a (click)="searchCatogory('mathematics')">Mathematics</a> </div>
+            <div class="subccatagory1 catagory-book" > <a (click)="searchCatogory('computer')">Computer</a></div>
+            <div class="subccatagory1 catagory-book" ><a (click)="searchCatogory('biology')">Biology</a> </div>
+            <div class="subccatagory1 catagory-book" > <a (click)="searchCatogory('novel')">Novels</a></div>
+            <div class="subccatagory1 catagory-book" ><a (click)="searchCatogory('history')">History</a> </div>
+            <div class="subccatagory1 catagory-book" ><a (click)="searchCatogory('business')">Business</a> </div>    
+        </div>
+        <div class="productlist catagory2">
+            <div class="subccatagory1 catagory-type1"> Book Author</div>
+            <div class="subccatagory1 catagory-book top-catagory"><a (click)="findBookByAuthor('Balagurusamy')">E Balagurusamy</a> </div>
+            <div class="subccatagory1 catagory-book"><a (click)="findBookByAuthor('Bruce')">Bruce Eckel</a></div>
+            <div class="subccatagory1 catagory-book"><a (click)="findBookByAuthor('Courant')">Mathematical Sciences Richard Courant</a></div>
+            <div class="subccatagory1 catagory-book"><a (click)="findBookByAuthor('Tracy Kidder')">Tracy Kidder</a></div>
+            <div class="subccatagory1 catagory-book"><a (click)="findBookByAuthor('Sedgewick')">Robert Sedgewick</a></div>
+            <div class="subccatagory1 catagory-book"><a (click)="findBookByAuthor('Laakmann McDowell')">Gayle Laakmann McDowell</a></div>
+            <div class="subccatagory1 catagory-book"><a (click)="findBookByAuthor('Tanenbaum')">Andrew S. Tanenbaum</a></div>
+            <div class="subccatagory1 catagory-book"><a (click)="findBookByAuthor('Martin')">Robert Cecil Martin</a></div>
+            <div class="subccatagory1 catagory-book"><a (click)="findBookByAuthor('Andy Hunt')">Andy Hunt</a></div>
+            <div class="subccatagory1 catagory-book"><a (click)="findBookByAuthor('Schildt')">Herbert Schildt</a></div>
+        </div>
+        <div class="productlist catagory3">
+            <div class="subccatagory1 offer-name"> 
+                <span id="offer-name1">BIG SALE</span><br>
+                <span id="offer-name2">DONT MISS IT !</span><br>
+                <span id="offer-name3">60</span>
+                <span id="offer-name4">%</span>off<br>
+                <span id="offer-name5">So many books, so little time.    </span>
+            </div>
+         
+        </div>
+        <div class="productlist catagory4">
+            <div class="subccatagory1 catagory-type1 top-catagory"> Publisher</div>
+            <div class="subccatagory1 catagory-book"> <a (click)="findBookByPublisher('McGraw')">McGraw Hill</a></div>
+            <div class="subccatagory1 catagory-book"> <a (click)="findBookByPublisher('MIT')">MIT Press</a></div>
+            <div class="subccatagory1 catagory-book"> <a (click)="findBookByPublisher('Reilly')">O'Reilly Media</a></div>
+            <div class="subccatagory1 catagory-book"> <a (click)="findBookByPublisher('Addison')">Addison Wesley</a></div>
+            <div class="subccatagory1 catagory-book"> <a (click)="findBookByPublisher('Create')">CreateSpace</a></div>
+        </div>
+    </div>
+    <div class="col-sm-9">
+        <div class="col-sm-4 productdisplay productdisplay-wrap">
+            <div class="product-cart logo-all-area">
+                <div class="logoarea">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <div class="logo text-center">
+                            <img class="icon" (click)="purchaseBook()" src="../../assets/samllimage/BuyBooks.png">
+                        </div>
+                        <div class="logo logotext">
+                            BUY
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 productdisplay">
+            <div class="product-cart logo-all-area">
+                <div class="logoarea">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <div class="logo text-center">
+                            <img class="icon" (click)="booksell()" src="../../assets/samllimage/abc.png">
+                        </div>
+                        <div class="logo logotext">
+                            SELL
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 productdisplay ">
+            <div class="product-cart logo-all-area repair-wrap">
+                <div class="logoarea">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <div class="logo text-center">
+                            <img class="icon" src="../../assets/samllimage/ExchangeIcon.png">
+                        </div>
+                        <div class="logo logotext">
+                            REPAIR
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Book cart display  -->
+        <div *ngFor="let book of bookList" infiniteScroll [infiniteScrollDistance]="6" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
+        <div class="col-md-4 product-detail">
+            <div class="product-warp">
+                <div class="product-info">
+                    <img class="imgdisplay" src="{{book.smallThumbnail}}" src="../../assets/default-book.jpg" (click)="buyBook(book.bookId)">
+                </div>
+                <div class="product-info product-info-wrap">
+                    <div class="title-warp">
+                        <h4 class="title-name">{{book.bookName}}</h4>
+                    </div>
+                    <span class="catagory">{{book.authors}}</span>
+                    <div class="title-warp">
+                        <div class="col-sm-9 price-warp">
+                            <p><b>₹</b> {{book.amount}} </p>
+                        </div>
+                        <div class="col-sm-3">
+                            <a  class="add-icon" (click)="addToCart(book.bookId)"> <i class="fas fa-cart-plus fa-2x add-to-cart"></i> </a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

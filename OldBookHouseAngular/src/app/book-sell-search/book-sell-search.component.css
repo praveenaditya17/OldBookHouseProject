@@ -1,0 +1,22 @@
+#forgot-pass{
+    float: right;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+#registration{
+    margin-top: 5%;
+    text-align: center;
+}
+#loginbody{
+    background-color: #ddd;
+    box-shadow: 1px 1px #ddd, 0em 0 0.4em 
+}
+.loginButton{
+    width: 25%;
+    margin-top: 1%;
+    background-color: #fec239;
+}
+#header{
+    background-color: #fec239;
+}

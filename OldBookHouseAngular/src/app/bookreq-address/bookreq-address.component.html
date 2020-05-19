@@ -1,0 +1,65 @@
+<div id="regBody">
+    <mat-toolbar id="regHeader">
+        <span>Add Address</span>
+        <span class="fill-remaining-space"></span>
+        <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabIndex="-1"><mat-icon>clear</mat-icon></button>
+      </mat-toolbar>
+      <mat-dialog-content class="mat-typography">
+        <div class="showAddress" *ngFor="let res of address">
+          <span id="address-wrap">
+            {{res.address}}<br>
+            {{res.address2}}<br>
+            {{res.district}}
+            {{res.state}}
+            {{res.postalCode}}
+          </span>
+          <button class="addButton" (click)="sendId(res.id)">Add</button>
+        </div>
+        <div>
+            <button class="btn addNewAddressBtn"  (click)="addAddress()">Add New Address</button>
+        </div>
+        <div *ngIf="isShowAddress">
+      <form [formGroup]="addaddressservice.form" class="normal-form" (submit)="onSubmit()">
+        <mat-grid-list cols=1 rowHeight="400px">
+          <mat-grid-tile>
+            <div class="controles-container">          
+              <mat-form-field>
+                <input formControlName="address" matInput placeholder="Address*">
+                <mat-error>This field is mandatory.</mat-error>
+              </mat-form-field>
+      
+              <mat-form-field>
+                <input formControlName="address2" matInput placeholder="Address 2">
+                <mat-error>This field is mandatory.</mat-error>
+              </mat-form-field>
+      
+              <mat-form-field>
+                <input formControlName="district" matInput placeholder="District*">
+                <mat-error>This field is mandatory.</mat-error>
+              </mat-form-field>
+      
+              <mat-form-field>
+                <input formControlName="location" matInput placeholder="Location*">
+                <mat-error>This field is mandatory.</mat-error>
+              </mat-form-field>
+      
+              <mat-form-field>
+                <input formControlName="pinCode" matInput placeholder="Postal Code*">
+                <mat-error>This field is mandatory.</mat-error>
+              </mat-form-field>
+      
+              <mat-form-field>
+                <input formControlName="state" matInput placeholder="State*">
+                <mat-error>This field is mandatory.</mat-error>
+              </mat-form-field>        
+            </div>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <div class="button-row">
+            <button mat-raised-button id="regButton" type="submit" [disabled]="addaddressservice.form.invalid">Submit</button>
+            <button mat-raised-button id="regButtonClear" (click)="onClear()">Clear</button>
+          </div>
+      </form>
+      </div>
+      </mat-dialog-content>
+    </div>

@@ -1,0 +1,120 @@
+<!-- header design -->
+<ngx-spinner
+    bdColor="rgba(51,51,51,0.8)"
+    size="large"
+    color="#fec239"
+    type="ball-scale-multiple">
+    <p style="font-size: 20px; color: #fec239">Loading...</p>
+</ngx-spinner>
+<div class="headerArea">
+<div class="col-sm-12 header">
+    <header>
+      <div class="header1">
+          <div class="image">
+              <img src="../../assets/logo (2).png" width="70%">
+          </div>
+          <div class="projectName">
+            <h2 id="projectName_wrap">Old<span id="projectName_wrap_book">Book</span>House</h2>
+          </div>
+          <div class="search-form search1">
+              <form class="search-form">
+                <div class="form-wrap search2">
+                  <input  placeholder="Search book by Title Author and ISBN..." type="text" #searchValue>
+                  <button class="btn-search" type="submit" (click)="searchBook(searchValue)">Search</button>
+                </div>
+              </form>
+          </div>
+          <div class="cart">
+            <div class="cart-wrap">
+                <button type="button" data-toggle="modal" data-target="#myModal" class="cart-button" (click)="getNotificationBook()">
+                  <i class="fas fa-cart-plus fa-2x icon"></i>
+                  <h5 class="totalItem">{{javaCallObj.getNotification()}}</h5>
+                </button>
+            </div>
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="check-cart close"  routerLink="/checkout" routerLinkActive="active" data-dismiss="modal">Check Cart</button> <h5 id="item" >{{javaCallObj.getNotification()}} ITEM</h5>
+                  </div>
+                  <span *ngFor="let book of bookList">
+                    <div class="product-cart">
+                      <div class="poduct-image">
+                          <img id="cart-img" src="{{book.smallThumbnail}}">
+                      </div>
+                      <div class="product-name">
+                          <p class="product-name-wrap">{{book.bookName}}</p>
+                          <span class="cart-price">₹ {{book.amount}}</span>
+                      </div>
+                      <div class="deleteitem">
+                          <a id="cart-delete" (click)="deleteBookRequest(book.buyOrderRequestId)" data-dismiss="modal" ><i class="fas fa-trash fa-1x"></i></a>
+                      </div>
+                    </div>
+                  </span>
+                  <div class="modal-footer">
+                    <p class="sub-total-wrap">SubTotal</p> <p class="total-price" >{{ this.javaCallObj.totalPrice.toPrecision(6)}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </header>
+</div>
+<!-- menue desing  -->
+<div class="col-sm-12 header">
+  <nav class="navbar menue_bar navbar-expand-lg">
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span id="toggel" class="glyphicon glyphicon-align-justify"></span>
+    </button>
+      <div class="container-fluid collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav" >
+          <li class="acive"><a (click)="home()">Home</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Books <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li ><a (click)="searchCatogory('science')">Science</a></li>
+              <li ><a (click)="searchCatogory('mathematics')">Mathematics</a></li>
+              <li ><a (click)="searchCatogory('computer')">Computer</a></li>
+              <li ><a (click)="searchCatogory('biology')">Biology</a></li>
+              <li ><a (click)="searchCatogory('novels')">Novels</a></li>
+              <li ><a (click)="searchCatogory('history')">History</a></li>
+            </ul>
+          </li>
+          <!-- <li><a (click)="purchaseBook()">Products</a></li> -->
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" *ngIf="javaCallObj.hasRole()">Request</a>
+            <ul class="dropdown-menu">
+              <li><a (click)="deliverySellRequest()">DileveryRequest</a></li>
+              <li><a (click)="deliveryRequestFun()">PickUpRequest</a></li>
+            </ul>
+          </li>
+          <li><a (click)="listUserFun()" *ngIf="javaCallObj.hasAdminRole()">UserList</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" *ngIf="javaCallObj.hasAdminRole()">Request</a>
+            <ul class="dropdown-menu">
+              <li><a (click)="deliverySellRequestAdmin()">AllDeliveryRequest</a></li>
+              <li><a (click)="deliveryRequestFunAdmin()">AllPickedUpRequest</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" *ngIf="hasLogin.isUserLoggedIn()">OrderHistory</a>
+            <ul class="dropdown-menu">
+              <li><a (click)="buyOrder()">PurchageHistory</a></li>
+              <li><a (click)="sellOrder()">SalesHistory</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" *ngIf="javaCallObj.hasAdminRole()">UpdateBooksPrice</a>
+            <ul class="dropdown-menu">
+              <li><a (click)="updateBookPrice()" >NewBookUpdatePrice</a></li>
+              <li><a (click)="getOldBook()">OldBookUpdatePrice</a></li>
+            </ul>
+          </li>
+          <li><a (click)="contact()">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a  (click)="registration()" *ngIf="!hasLogin.isUserLoggedIn()"><span class="glyphicon glyphicon-user"></span> SignUp</a></li>
+          <li><a  (click)="login()" *ngIf="!hasLogin.isUserLoggedIn()"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li><a   *ngIf="hasLogin.isUserLoggedIn()" (click)="viewProfile()"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+          <li><a  (click)="logOut()" *ngIf="hasLogin.isUserLoggedIn()" ><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+      </div>
+  </nav>
+</div>
+</div>

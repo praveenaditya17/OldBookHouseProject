@@ -1,0 +1,181 @@
+
+.productdisplay{
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+}
+.productdisplaywrap{
+    display: flex;
+}
+/* ------------------ side menue bar  for product catagory selection ------------------- */
+.catagory1{
+
+        border: 1px solid #ddd;
+}
+.catagory-type1{
+    padding: 10px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    color: #444;
+    font-size: 2rem;
+}
+.catagory-book{
+    padding-top: 8px;
+    
+    color: #777;
+    padding-bottom: 8px;
+    border-top: 1px solid #ddd;
+    margin: 0 10px -1px;
+}
+.top-catagory{
+    border: aliceblue;
+}
+.catagory2{
+    border: 1px solid #ddd;
+    margin-top: 4rem;
+}
+.catagory3{
+    border: 1px solid #ddd;
+    margin-top: 4rem;
+    background-color: #ffc111;
+}
+.offer-name{
+    text-align: center;
+}
+#offer-name1{
+    color: #fff;
+    font-size: 36px;
+    font-weight: 600;
+}
+#offer-name2{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+#offer-name3{
+    color: #2d2a25;
+    font-size: 77px;
+    font-weight: 600;
+}
+#offer-name4{
+    font-size: 3.067em;
+    font-weight: 500px;
+}
+#offer-name5{
+  color: white;
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 2rem;
+}
+.catagory4{
+    border: 1px solid #ddd;
+    margin-top: 4rem;
+}
+/* --------------------   select for  BUY SELL & REPAIR ------------------------------------- */
+.icon{
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.logo-all-area{
+    border: 1px solid #f5f5f5;
+    background-color: #f5f5f5;
+}
+.logoarea{
+    background-color: #f5f5f5;
+    color: #4a4744;
+    font-family: serif;
+    font: 1em sarif;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+}
+.logotext{
+    font-weight: bolder;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+.repair-wrap{
+    margin-right:1.5rem;
+}
+
+/*--------------               product-display-area   or catalogue desing   --------------  */
+.productdisplay-wrap{
+    padding: 0px 0px 0px 15px;
+}
+.product-cart-row{
+    margin-top: 2rem;
+    display: flex;
+}
+.product-detail{
+    display: inline;
+}
+.product-warp{
+    margin-top: 2rem;
+    padding: 1rem;
+    box-shadow: 1px 1px #ddd, 0em 0 .8em  #ddd;
+}
+.imgdisplay{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    height: 215px;
+    width: 90%;
+
+}
+.product-info-wrap{
+    padding: 1rem;
+}
+.catagory{
+    margin-bottom: 4px;
+    display: block;
+    color: #555;
+    font-family: serif;
+    font-size: 13px;
+    line-height: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.title-warp{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: 500;
+}
+.title-name{
+    margin: auto;
+    margin-top: 1rem;
+    font-size: 1.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.add-icon{
+    color: white;
+    cursor: pointer;
+}
+.price-warp{
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
+    color: black;
+    padding: 0px;
+}
+.add-to-cart{
+    float: right;
+    font-size: 1.6rem;
+    background: #fec43c;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+}
+.second-catalogue{
+    margin: 0rem 1rem;
+}
+.third-catalogue{
+    margin-right: 1rem;
+}
+a{
+    cursor: pointer;
+    color: #7c7c7c;
+}

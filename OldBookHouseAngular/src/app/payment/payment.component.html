@@ -1,0 +1,58 @@
+<div id="regBody">
+    <mat-toolbar id="regHeader">
+        <span>Payment Details</span>
+        <span class="fill-remaining-space"></span>
+        <button class="btn-dialog-close" (click)="onClose()" mat-stroked-button tabIndex="-1"><mat-icon>clear</mat-icon></button>
+    </mat-toolbar>
+    <mat-dialog-content>
+        <form>
+            <mat-grid-list cols=1 rowHeight="500px">
+                <mat-grid-tile>
+                    <div class="controles-container">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Card Holder Name</mat-label>
+                            <input matInput #cc_name placeholder="Card Holder Name" name="cc_name">
+                            <mat-icon matSuffix>person</mat-icon>
+                        </mat-form-field>
+                    
+                        <mat-form-field appearance="outline">
+                            <mat-label>Card Number</mat-label>
+                            <input matInput #cardNumber placeholder="Credit Card #" name="cardNumber">
+                            <mat-icon matSuffix>payment</mat-icon>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Exp. Month</mat-label>
+                            <input matInput #expireMonth placeholder="Expiration Month" name="expMonth">
+                            <mat-icon matSuffix>event</mat-icon>
+                        </mat-form-field>
+                    
+                        <mat-form-field appearance="outline">
+                            <mat-label>Exp. Year</mat-label>
+                            <input matInput #expireYear placeholder="Expiration Year" name="expYear">
+                            <mat-icon matSuffix>event</mat-icon>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>CVC</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" #cvc placeholder="CVC" name="cvc">
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Amount</mat-label>
+                            <input matInput #amount name="amount" value="{{this.javaService.totalPrice}}" readonly>
+                            <mat-icon matSuffix>₹</mat-icon> 
+                        </mat-form-field>
+                    </div>    
+                </mat-grid-tile>
+            </mat-grid-list>
+            <div class="button-row">
+                <button mat-raised-button id="regButton" (click)="chargeCreditCard(cc_name.value,cardNumber.value,expireMonth.value,expireYear.value,cvc.value,amount.value)" >Submit</button>
+                <button mat-raised-button id="regButtonClear" (click)="onClear()">Clear</button>
+            </div>
+        </form>
+    </mat-dialog-content>
+</div>

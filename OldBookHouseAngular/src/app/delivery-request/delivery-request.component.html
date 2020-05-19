@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="requestArea">
+    <div class="chartTable" *ngIf="this.javaServiceObj.hasAdminRole()">
+        <canvas id="myChart" width="700" height="400"></canvas>
+    </div>
+    <div class="col-sm-12 booktable"  *ngFor="let book of this.array;let i = index">
+        <div class="col-sm-2 product-detail">
+            <div class="product-wrap">
+                <div class="product-info">
+                    <img class="imgdisplay" src="{{this.book[7]}}" src="../../assets/default-book.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="product-info product-info-wrap">
+                    <div class="col-sm-6 bookDetails">
+                    <h3 id="title">Book Details</h3>
+                        <p>Title : <span class="catagory"> {{book[1]}}</span></p>
+                        <p>Authors : <span class="catagory"> {{book[2]}}</span></p>
+                        <p>ISBN 10 : <span class="catagory"> {{book[5]}}</span></p>
+                        <p>Publisher : <span class="catagory">{{book[6]}}</span></p>
+                        <p>Status : <span class="catagory" id="status">{{book[3]}}</span></p>
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-5 userDetails">
+                        <h3 id="title">User Details</h3>
+                        <p>Name : <span class="catagory"> {{book[13]}} {{book[14]}}</span></p>
+                        <p>Mob. : <span class="catagory">{{book[15]}}</span></p>
+                        <p>Address : <span class="catagory">{{book[8]}} {{book[9]}}</span></p>
+                        <p><span class="catagory">{{book[10]}}</span></p>
+                        <p><span class="catagory">{{book[12]}} {{book[11]}}</span></p>
+                    </div>
+            </div> 
+        </div>
+        <div class="col-sm-2">
+            <div class="title-warp text-center">
+                <button *ngIf="sucess" class="btn sell" (click)="updateStatus(i)">Update Status</button>
+            </div>
+        </div>
+    </div>
+</div>

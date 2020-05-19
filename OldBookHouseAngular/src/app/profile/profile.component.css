@@ -1,0 +1,25 @@
+.prfileArea{
+    margin-top: 12rem;
+}
+img {
+
+    border-radius: 50%;
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.profile-header{
+    background-color: #fec239;
+}
+.text-center{
+    text-align: center;
+    font-family: sans-serif;
+    border: 1px solid #f3f3f3;
+    box-shadow: 1px 1px 1px 1px #f3f3f3;
+}
+#userName{
+    color: #fec239;
+}

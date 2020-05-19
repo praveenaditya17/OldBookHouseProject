@@ -1,0 +1,97 @@
+<div id="regBody">
+  <mat-toolbar id="regHeader">
+      <span>WelCome In Registration</span>
+      <span class="fill-remaining-space"></span>
+      <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabIndex="-1"><mat-icon>clear</mat-icon></button>
+  </mat-toolbar>
+  <mat-dialog-content class="mat-typography">
+    <form [formGroup]="registrationService.form" class="normal-form" (submit)="onSubmit()">
+      <mat-grid-list cols="2" rowHeight="400px">
+        <mat-grid-tile>
+          <div class="controles-container">
+            <mat-form-field>
+              <input type="text" formControlName="firstName" matInput placeholder="First Name*">
+              <span matPrefix><mat-icon>person</mat-icon>&nbsp;</span>
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+    
+            <mat-form-field>
+              <input type="text" formControlName="lastName" matInput placeholder="Last Name*">
+              <span matPrefix><mat-icon>person</mat-icon>&nbsp;</span>
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input  formControlName="email" matInput placeholder="Email*">
+              <span matPrefix><mat-icon>email</mat-icon>&nbsp;</span>
+              <mat-error *ngIf="registrationService.form.controls['email'].errors?.required">This field is mandatory.</mat-error>
+              <mat-error *ngIf="registrationService.form.controls['email'].errors?.email">Invalid email address.</mat-error>
+            </mat-form-field>
+    
+            <mat-form-field>
+              <input type="number" formControlName="mobileNumber" matInput placeholder="Mobile*">
+              <span matPrefix><mat-icon>mobile_friendly</mat-icon>&nbsp;</span>
+              <mat-error *ngIf="registrationService.form.controls['mobileNumber'].errors?.required">This field is mandatory.</mat-error>
+              <mat-error *ngIf="registrationService.form.controls['mobileNumber'].errors?.minlength">Minimum 10 charactors needed.</mat-error>
+            </mat-form-field>
+    
+            <mat-form-field>
+              <input type="password" formControlName="password" matInput placeholder="Password*">
+              <span matPrefix><mat-icon>lock</mat-icon>&nbsp;</span>
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input type="password" formControlName="confirmPassword" matInput placeholder="Confirm Password*">
+              <span matPrefix><mat-icon>lock</mat-icon>&nbsp;</span>
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
+    
+        <mat-grid-tile>
+          <div class="controles-container">          
+            <mat-form-field>
+              <input type="text" formControlName="address" matInput placeholder="Address*">
+              <span matPrefix><mat-icon>account_box</mat-icon>&nbsp;</span>
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+    
+            <mat-form-field>
+              <input type="text" formControlName="address2" matInput placeholder="Address 2">
+              <span matPrefix><mat-icon>account_box</mat-icon>&nbsp;</span>
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+    
+            <mat-form-field>
+              <input type="text" formControlName="district" matInput placeholder="District*">
+              <span matPrefix><mat-icon>account_box</mat-icon>&nbsp;</span>
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+    
+            <mat-form-field>
+              <input type="text" formControlName="location" matInput placeholder="Location*">
+              <span matPrefix><mat-icon>location_on</mat-icon>&nbsp;</span>
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+    
+            <mat-form-field>
+              <input type="number" formControlName="pinCode" matInput placeholder="Postal Code*">
+              <span matPrefix><mat-icon>account_box</mat-icon>&nbsp;</span>
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+    
+            <mat-form-field>
+              <input type="text" formControlName="state" matInput placeholder="State*">
+              <span matPrefix><mat-icon>account_box</mat-icon>&nbsp;</span>
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <div class="button-row">
+          <button mat-raised-button id="regButtonClear" (click)="onClear()">Clear</button>
+          <button mat-raised-button id="regButton" type="submit" [disabled]="registrationService.form.invalid">Submit</button>
+        </div>
+    </form>
+  </mat-dialog-content>
+</div>

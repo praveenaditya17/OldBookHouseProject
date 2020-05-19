@@ -1,0 +1,345 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.headerArea{
+    display: inline-block;
+    width: 100%;
+    position: fixed;
+    z-index: 1050;
+    top: 0;
+}
+.header{
+    padding: 0px;
+    margin: 0px;
+}
+.header1{
+    height: 75px;
+    width: 100%;
+}
+.image{
+    float: left;
+}
+.projectName{
+    float: left;
+
+}
+#projectName_wrap{
+    font-size: 4rem;
+    margin-top: 15px;
+    color: black;
+}
+#projectName_wrap_book{
+    color: #adadad;
+}
+img{
+    margin-top: 3px;
+    margin-left: 2rem;
+}
+.search2{
+    width: 100%;
+}
+input{
+    width: 70%;
+    padding: 1%;
+    border: 0px;
+}
+button{
+    background-color: #333;
+    color: white;
+    padding: 1%;
+    border: 0px;
+}
+
+/* ---------------------- cart desing css   ------------------- */
+.cart{
+    position: relative;
+    float: left;
+    width: 3%;
+    height: 100%;
+}
+.icon{
+    float: left;
+    margin-top: 0.8em;
+}
+.totalItem{
+    color: white;
+    display: inline-flex;
+    position: absolute;
+}
+.cart-button{
+    background-color: #fec239;
+}
+.cart-button:focus{
+    outline: none;
+}
+.modal-dialog {
+    margin-top: 3%;
+    width: 37%;
+    margin-left: 61%;
+}
+.check-cart{
+    float: left;
+    font-family: sans-serif;
+    background-color: #fec239;
+    color: black;
+    opacity: 1;
+    font-size: large;
+}
+.check-cart:focus{
+    outline: none;
+}
+#item{
+    float: right;
+    margin-right: 1rem;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.product-cart{
+    display: flex;
+}
+.poduct-image{
+    float: left;
+    display: block;
+    width: 40%;
+}
+#cart-img{
+    max-width: 8rem;
+}
+.product-name{
+    float: left;
+    width: 40%;
+}
+.product-name-wrap{
+    padding: 1rem;
+    font-size: large;
+}
+.deleteitem{
+    width: 20%;
+    text-align: center;
+    margin-top: 3rem;
+    font-size: larger;
+}
+.cart-price{
+    font-size: large;
+    padding: 1rem;
+    margin: 0;
+}
+#cart-delete{
+    color: #ffc111;
+}
+
+.sub-total{
+    border-top: 1px solid;
+    padding: 0;
+    margin-top: 2rem;
+}
+.sub-total-wrap{
+    float: left;
+    padding: 1rem;
+    font-size: large;
+    color: black;
+}
+.total-price{
+    float: right;
+    padding: 1rem;
+    font-size: large;
+    color: black;  
+}
+/* ---------------------  menue desing ----------------- */
+.menue_bar{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: #f3f3f3;
+}
+a{
+    color: black;
+}
+.navbar-right {
+    margin-right: 2%;
+}
+#toggel{
+    font-size: x-large;
+    margin: 5px;
+}
+
+/* --------------------- loging design---------------------------------------- */
+.modal-dialog-wrap{
+    margin-top: 10%;
+    width: 37%;
+    margin-left: 61%;
+}
+.modal-header {
+    padding: 1rem;
+    background-color: #fec239;
+}
+
+.loginCrossButton{
+    color: white;
+    background-color: #fec239;
+    font-size: 3rem;
+    opacity: 1;
+}
+.img{
+    max-width: 38%;
+}
+.image-logo{
+    text-align: center;
+}
+.md-form{
+    font-size: large;
+    color: #fec239;
+    font-family: serif;
+    margin-left: 20%;
+}
+.input-value{
+    border: 1px solid #f3f3f3;
+}
+.input-value:focus{
+    color: white;
+}
+.loginBtn{
+    background-color: #fec239;
+    font-size: 2rem;
+    width: 10rem;
+}
+.signupLink1{
+    font-size: 2rem;
+    color: black;
+}
+.signupLink2{
+    color: #fec239;
+}
+/* -------------- registation page design -------------------------*/
+.reg-body-wrap{
+    color: #fec239;
+}
+.row{
+    margin-left: 7%;
+}
+label{
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+.singnupBTN{
+    margin-top: 2rem;
+}
+
+/* ----------------  ----------------- responsive designing   -----------------        ------------ */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .header1 {
+        height: 140px;
+        width: 100%;
+        background: #ffc111;
+    }
+    .image{
+        text-align: center;
+    }
+    .cart{
+  
+         float: left;
+         width: 10%;
+         height: 50%;
+     }
+  
+    .icon{
+        float: left;
+        margin-top: 0.5em;
+    }
+    .totalItem{
+        margin-top: 0.5em;
+        color: white;
+    }
+    .modal-dialog-wrap{
+        margin-top: 10%;
+        width: 44%;
+        margin-left: 55%;
+    }
+    .search1{
+        float: left;
+        width: 49%;
+        margin-top: 20px;
+    }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px )and (max-width: 768px)  {
+    .header1 {background: #ffc111;
+        height: 140px;
+    }
+    .cart{
+      
+         float: left;
+         width: 10%;
+         margin-top: -23px;
+         height: 50%;
+     }
+     .search1{
+        float: left;
+        width: 49%;
+        margin-left: 10%;
+    }
+
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) and (max-width: 896px) {
+    .header{
+        padding: 0px;
+        margin: 0px;
+        /* height: 120px; */
+    }
+    .header1 {background: #ffc111;
+        height: 120px;
+        width: 100%;
+    }
+    .navbar-toggler{
+        display: none;
+    }
+    .search1{
+        float: left;
+        width: 49%;
+        margin-left: 10%;
+    }
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 897px) {
+    .header1 {background: #ffc111;}
+    .navbar-toggler{
+        display: none;
+    }
+    .search1{
+        float: left;
+        margin-top: 20px;
+        width: 46%;
+        margin-left: 6%;
+    }
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .header1 {background: #ffc111;}
+    .navbar-toggler{
+        display: none;
+    }
+    .search1{
+        float: left;
+        margin-top: 20px;
+        width: 49%;
+        margin-left: 10%;
+    }
+  }
+
+a:hover{
+      cursor: pointer;
+}
+#cart-delete{
+    color: #ffc111;
+}

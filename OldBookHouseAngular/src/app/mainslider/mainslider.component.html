@@ -1,0 +1,63 @@
+<app-header></app-header>
+<div class="fluid-container mainsliderwrap"> 
+    <div class="col-xs-12 col-sm-8 largeslider">
+        <div class="wrap">
+            <div id="myCarousel" class="carousel slide" data-ride="slide" data-interval="false">
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="../../assets/shutterstock_1068141515.jpg" width="100%">
+                </div>
+                <div class="item">
+                  <img src="../../assets/b2.jpg" width="100%"> 
+                </div>
+                <div class="item">
+                  <img src="../../assets/b3.jpg" width="100%">
+                 
+                </div>
+                <div class="item">
+                    <img src="../../assets/b4.jpg" width="100%">
+                   
+                 </div>
+              </div>
+          
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>  
+            </div>
+        </div>
+    </div>
+    <!-- <div class="col-sm-1"></div> -->
+    <div class="col-xs-12 col-sm-4">
+        <div class="wrap">
+            <div class="smallslider2 border1">
+                <div class="col-sm-7 smallimage" >
+                    <img src="../../assets/samllimage/hiclipart.com (3).png" width="100%">
+                </div>
+                <div class="col-sm-4">
+                    <h4><b>Old Book Collection</b></h4>
+                    <h6>Sell up to 30% off</h6>
+                    <button type="submit" class="btn" (click)="getAllBook()">Shop Now</button>
+                </div> 
+                <div class="col-sm-1"></div>      
+            </div>
+            <div class="smallslider2 border2">
+                <div class="smallslider2tree"> 
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4">
+                        <h4 class="name-wrap"><b>New Book Collection</b></h4>
+                        <h6>Sell up to 40% off</h6>
+                        <button type="submit" class="btn" (click)="getAllBook()">Shop Now</button>
+                    </div>
+                    <div class="col-sm-6" >
+                        <img src="../../assets/samllimage/book2.png" width="100%" id="samllimage2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-productdisplay></app-productdisplay>
+

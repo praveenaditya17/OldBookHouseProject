@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div class="bookArea">
+    <div class="col-sm-12 booktable"  *ngFor="let book of this.bookList">
+        <div class="col-sm-2 product-detail">
+            <div class="product-warp">
+                <div class="product-info">
+                    <img class="imgdisplay" src="{{book.thumbnail}}" alt="book image" (click)="viewBook(book.sellOrderRequestId)">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-7">
+            <div class="product-info product-info-wrap">
+                <h4 class="title-name">{{book.bookName}}</h4>
+                <div>
+                    <p>Authors : <span class="catagory"> {{book.authors}}</span></p>
+                    <p>ISBN : <span class="catagory">{{book.isbnNo1}}</span></p>
+                    <p>Publisher : <span class="catagory">{{book.publisher}}</span></p>
+                    <p>Publisher Date : <span class="catagory">{{book.publishedDate}}</span></p>
+                    <p>Price : <span class="catagory"><b>₹</b> {{book.amount}}</span></p>
+                </div>
+            </div> 
+        </div>
+        <div class="col-sm-3">
+            <div class="text-center">
+            <button (click)="updatePrice(book.bookId)" class="btn buy">Update Pricce</button>
+        </div>
+    </div>
+</div>

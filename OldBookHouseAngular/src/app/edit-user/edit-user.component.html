@@ -1,0 +1,52 @@
+<div id="regBody">
+    <mat-toolbar id="regHeader">
+        <span>Update User Details</span>
+        <span class="fill-remaining-space"></span>
+        <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabIndex="-1"><mat-icon>clear</mat-icon></button>
+    </mat-toolbar>
+    <mat-dialog-content>
+        <form [formGroup]="edituserService.form" class="normal-form" (submit)="onSubmit()">
+            <mat-grid-list cols=1 rowHeight="300px">
+                <mat-grid-tile>
+                    <div class="controles-container">          
+                        <mat-form-field>
+                            <input formControlName="firstName" matInput placeholder="First Name*">
+                            <span matPrefix><mat-icon>person</mat-icon>&nbsp;</span>
+                            <mat-error>This field is mandatory.</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field>   
+                            <input formControlName="lastName" matInput placeholder="Last Name">
+                            <span matPrefix><mat-icon>person</mat-icon>&nbsp;</span>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <input formControlName="email" matInput placeholder="Email*">
+                            <span matPrefix><mat-icon>email</mat-icon>&nbsp;</span>
+                            <mat-error>This field is mandatory.</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <input formControlName="mobileNumber" matInput placeholder="Mobile Number*">
+                            <span matPrefix><mat-icon>mobile_friendly</mat-icon>&nbsp;</span>
+                            <mat-error>This field is mandatory.</mat-error>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <mat-label>Select Role</mat-label>
+                            <span matPrefix><mat-icon>assignment_ind</mat-icon>&nbsp;</span>
+                            <mat-select formControlName="role">    
+                                <mat-option *ngFor="let role of roles" [value]="role.value">
+                                    {{role.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
+            <div class="button-row">
+                <button mat-raised-button id="regButton" type="submit">Submit</button>
+                <button mat-raised-button id="regButtonClear" (click)="onClear()">Clear</button>
+            </div>
+        </form>
+    </mat-dialog-content>
+</div>

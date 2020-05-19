@@ -1,0 +1,82 @@
+.wrap {
+    width: auto;
+    margin: 20px auto;
+    display: grid;
+    font-family: serif;
+    font-size: 2rem;
+}
+.border1{
+    border-bottom: 1px solid #ddd;
+}
+
+#samllimage1{
+    width: 100%;
+}
+
+.border2{
+    float: left; 
+}
+
+.smallslider2tree{
+    margin-top: 2rem;
+    float: left;
+}
+
+.name-wrap{
+    margin-top: 2rem;
+}
+
+.btn{
+    background-color: #ffc111;
+}
+
+.h4, .h5, .h6, h4, h5, h6 {
+    margin-top: 12px;
+}
+
+.col-sm-6 {
+    width: 45%;
+}
+
+/* ----------------  ----------------- responsive designing   -----------------        ------------ */
+
+/* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    .mainsliderwrap{
+        display: inline-block;
+        margin-top: 19rem;
+    }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px )and (max-width: 767px)  {
+    .mainsliderwrap{
+        display: inline-block;
+        margin-top: 19rem;
+    }
+
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) and (max-width: 896px) {
+    .mainsliderwrap{
+        display: inline-block;
+        margin-top: 17rem;
+    }
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 897px) {
+    .mainsliderwrap{
+        display: inline-block;
+        margin-top: 13rem;
+    }
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .mainsliderwrap{
+        display: inline-block;
+        margin-top: 13rem;
+    }
+  }

@@ -1,0 +1,42 @@
+<div id="loginbody">
+<mat-toolbar id="header">
+    <span>LogIn</span>
+    <span class="fill-remaining-space"></span>
+    <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabIndex="-1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+<form [formGroup]="loginService.form" class="normal-form" (submit)="onSubmit()">
+    <mat-grid-list cols="1" rowHeight="300px">
+        <mat-grid-tile>
+            <div class="controles-container">
+                <div class="wrongLogin" *ngIf="islogin">Userame and Password is Wrong! please login again :) </div>
+                <mat-form-field>
+                    <input type="text" formControlName="userName" matInput placeholder="Username*">
+                    <span matPrefix><mat-icon>person</mat-icon>&nbsp;</span>
+                    <mat-error>This field is mandatory.</mat-error>
+                </mat-form-field>
+                
+                <mat-form-field>
+                    <input type="password" formControlName="userPassword" matInput placeholder="Password*">
+                    <span matPrefix><mat-icon>lock</mat-icon>&nbsp;</span>
+                    <mat-error>This field is mandatory.</mat-error>
+                </mat-form-field>
+                <div>
+                    <div class="add-bottom-padding">
+                        <!-- <mat-checkbox formControlName="rememberPassword"></mat-checkbox> -->
+                        <a id="forgot-pass" (click)="forgetPassoword()">Forgot Password?</a>
+                    </div>
+                    
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <button  class="login-button loginButton"  mat-raised-button color="accent" type="submit">LogIn</button>
+                </div>
+
+                <div class="d-flex justify-content-center" id ="registration">
+                    <p>Dont't have account?<a (click)="registration()">Register</a></p>
+                </div>
+            </div>    
+        </mat-grid-tile>
+    </mat-grid-list>    
+</form> 
+</div>

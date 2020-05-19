@@ -1,0 +1,63 @@
+<app-header></app-header>
+<div class="flud-container checkout-table">
+    <div class="axx">    
+    <div class="col-sm-12 checkout-table-wrap abcd">
+            <div  class="col-sm-2">Product</div>
+            <div  class="col-sm-2">Name</div>
+            <div  class="col-sm-2">Price</div>
+            <div  class="col-sm-2">Quantity</div>
+            <div  class="col-sm-2">Total</div>
+            <div  class="col-sm-2">Action</div>
+    </div>
+    <div class="col-sm-12 product-checkout abcd " *ngFor="let book of bookList; let i of index">
+            <div  class="col-sm-2">
+                <img id="bookImage" src="{{book.smallThumbnail}}">
+            </div>
+            <div  class="col-sm-2 text-center product-name-wrap">{{book.bookName}}</div>
+            <div  class="col-sm-2 text-center product-name-wrap"><b>₹</b>{{book.amount}}</div>
+            <div  class="col-sm-2 ">
+                <i id="add-item" class="fas fa-minus" (click)="minusQuantity(book.buyOrderRequestId)"></i>
+                <p id="add-item">{{book.quantity}}</p>
+                <i id="add-item" class="fas fa-plus" (click)="plusQuantity(book.buyOrderRequestId,book.bookId,book.quantity)"> </i>
+            </div>
+            <div  class="col-sm-2 text-center product-name-wrap"><b>₹</b>{{book.amount}}</div>
+            <div  class="col-sm-2 text-center">
+                <a (click)="deleteBookRequest(book.buyOrderRequestId)">
+                    <i class="fas fa-times"></i>
+                </a>
+            </div>
+            
+    </div>
+    <div class="col-sm-12 product-checkout abcd">
+        <div  class="col-sm-2"> </div>
+        <div  class="col-sm-2 text-center"> </div>
+        <div  class="col-sm-2 text-center"></div>
+        <div  class="col-sm-2 text-center product-name-wrap">
+            SHIPPING CHARGE  
+        </div><div  class="col-sm-2 text-center product-name-wrap">
+            {{shipingCharge}}
+        </div>
+        <div  class="col-sm-2"></div>
+    </div>
+    <div class="col-sm-12 product-checkout abcd">
+        <div  class="col-sm-2">
+            <button class="btn" routerLink="/mainslider" routerLinkActive="active" >Continue Shoping</button>
+        </div>
+        <div  class="col-sm-2">
+            <button *ngIf="totalLength>0" class="btn" (click)="buyNow()" >Buy Now</button>
+        </div>
+        <div  class="col-sm-2 text-center">   
+        </div>
+        <div  class="col-sm-2 text-center product-name-wrap">
+            Total =  
+        </div>
+        <div  class="col-sm-2 text-center product-name-wrap">
+            {{ this.javaServiceObj.totalPrice}}
+        </div>
+        <div  class="col-sm-2 text-center">    
+        </div>
+        <div  class="col-sm-2">   
+        </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<app-header></app-header>
+<div class="flud-container checkout-table">
+    <div class="table-wrap">    
+        <div class="col-sm-12 checkout-table-wrap wrap">
+            <div  class="col-sm-2"><h3>Product</h3></div>
+            <div  class="col-sm-2"><h3>Name</h3></div>
+            <div  class="col-sm-2"><h3>Price</h3></div>
+            <div  class="col-sm-2"><h3>BookingStatus</h3></div>
+            <div  class="col-sm-2"><h3>Date</h3></div>
+            <div  class="col-sm-2"><h3>PaymentStatus</h3></div>
+        </div>
+        <div class="col-sm-12 product-checkout wrap " *ngFor="let book of bookList;let i=index">
+            <div  class="col-sm-2 center-block">
+                <img id="bookImage" src="{{book.smallThumbnail}}">
+            </div>
+            <div  class="col-sm-2 text-center product-name-wrap">{{book.bookName}}</div>
+            <div  class="col-sm-2 text-center product-name-wrap"><b>₹</b> {{book.amount}}</div>
+            <div  class="col-sm-2 text-center product-name-warp product-style color">{{book.checkStatus}}</div>
+            <div  class="col-sm-2 text-center product-name-warp product-style">{{book.date}}</div>
+            <div  class="col-sm-2 text-center product-name-warp product-style">{{book.status}}</div>
+        </div>
+    </div>
+</div>        
+

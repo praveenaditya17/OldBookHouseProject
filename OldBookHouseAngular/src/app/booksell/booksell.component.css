@@ -1,0 +1,106 @@
+
+#inputIsbn{
+    width: 100%;
+    padding: 6px;
+    margin: 0px;
+    border: 1px solid;
+    margin-top: 4px;
+}
+#inputtitle{
+    font-size: 2rem;
+    padding: 0px;
+}
+#submitBtn{
+    padding: 7px;
+    width: 9rem;
+    background-color: #fec43c;
+    border: none;
+    margin-top: 4px;
+}
+.paddingwrap{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+form{
+    margin-top: 1rem;
+}
+
+/*         book cart design        */
+.booktable{
+    border-bottom: 2px solid #f5f5f5;
+    padding: 2rem;
+}
+.bookArea{
+    margin-top: 14rem;
+}
+.productdisplay-wrap{
+    padding: 0px 0px 0px 15px;
+}
+.product-cart-row{
+    display: flex;
+}
+.product-detail{
+    display: inline;
+}
+.product-warp{
+    margin-top: 2rem;
+    padding: 1rem;
+     box-shadow: 1px 1px #ddd, 0em 0 .8em  #ddd;
+}
+.imgdisplay{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    min-width: 90%;
+
+}
+.product-info-wrap{
+    padding: 1rem;
+    color: #fec43c;
+    margin-top: 2rem;
+}
+.catagory{
+    margin-bottom: 4px;
+    display: inline-block;
+    color: black;
+    font-family: serif;
+    font-size: 14px;
+    margin: 0px;
+}
+.title-name{
+    
+    font-size: 2.9rem;  
+}
+.add-icon{
+    color: white;
+}
+p{
+    line-height: 1rem;
+}
+.price-warp{
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
+    color: black;
+    padding: 0px;
+}
+.add-to-cart{
+    float: right;
+    font-size: 1.6rem;
+    background: #fec43c;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+}
+.second-catalogue{
+    margin: 0rem 1rem;
+}
+.third-catalogue{
+    margin-right: 1rem;
+}
+.sell{
+    margin-top: 9rem;
+    text-align: center;
+    width: 40%;
+    background-color: #fec43c;
+}
+

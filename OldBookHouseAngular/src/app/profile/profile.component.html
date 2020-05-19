@@ -1,0 +1,15 @@
+<div class="prfileArea">
+    <mat-toolbar class="profile-header">
+        <span>User Profile</span>
+        <span class="fill-remaining-space"></span>
+        <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabIndex="-1"><mat-icon>clear</mat-icon></button>
+    </mat-toolbar><br>
+    <div>
+        <img src="../../assets/profile.png" alt="profile">
+    </div><br>
+    <div class="text-center">
+        <h3 id="userName">{{name|uppercase}}</h3>
+        <h4>{{email}}</h4>
+        <h4>{{mobile}}</h4>
+    </div>
+</div>

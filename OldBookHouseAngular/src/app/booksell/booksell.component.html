@@ -1,0 +1,40 @@
+<app-header></app-header>
+<div class="bookArea">
+    <div class="col-sm-12">
+        <form [formGroup]="book" (ngSubmit)="sendData()">
+            <div class="col-sm-1 "></div>
+            <div class="col-sm-4 paddingwrap"> <h5 id="inputtitle"> Enter Your Book ISBN or Book Title...</h5></div>
+            <div class="col-sm-3 paddingwrap"><input id="inputIsbn" type="text" formControlName="isbnNo" ></div>
+            <div class="col-sm-2 paddingwrap"><input id="submitBtn" type="submit" value="Search"></div>
+            <div class="col-sm-2"></div>
+        </form>
+    </div>
+    <div *ngIf='isBook'>
+    <div class="col-sm-12 booktable"  *ngFor="let i of [0,1,2]">
+        <div class="col-sm-2 product-detail">
+            <div class="product-warp">
+                <div class="product-info">
+                    <img class="imgdisplay" src="{{this.array.items[i].volumeInfo.imageLinks.thumbnail}}" alt="book image">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-7">
+            <div class="product-info product-info-wrap">
+                
+                    <h4 class="title-name">{{this.array.items[i].volumeInfo.title}}</h4>
+                    <div>
+                        <p>Authors : <span class="catagory"> {{this.array.items[i].volumeInfo.authors[0]}}</span></p>
+                        <p>ISBN : <span class="catagory">{{this.array.items[i].volumeInfo.industryIdentifiers[0].identifier}}</span></p>
+                        <p>Publisher : <span class="catagory">{{this.array.items[i].volumeInfo.publisher}}</span></p>
+                        <p>Publisher Date : <span class="catagory">{{this.array.items[i].volumeInfo.publishedDate}}</span></p>
+                    </div>
+            </div> 
+        </div>
+        <div class="col-sm-3">
+            <div class="title-warp text-center">
+                <button  class="btn sell" (click)="sellBook(i)">Sell Book</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

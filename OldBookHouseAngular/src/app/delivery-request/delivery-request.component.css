@@ -1,0 +1,42 @@
+.requestArea{
+    margin-top: 14rem;
+}
+.booktable{
+    margin-top: 2rem;
+}
+.product-wrap{
+    margin-top: 2rem;
+}
+.bookDetails{
+    border: 1px solid #f3f3f3;
+    box-shadow: 1px 1px 1px 1px #f3f3f3;
+    float: left;
+}
+.userDetails{
+    border: 1px solid #f3f3f3;
+    box-shadow: 1px 1px 1px 1px #f3f3f3;
+    float: left;
+}
+#title{
+    text-align: center;
+    font-family: serif;
+    color: black;
+    border-bottom: 1px solid #f3f3f3;
+}
+#status{
+    color: #ffb100;
+}
+.sell{
+    margin-top: 9rem;
+    text-align: center;
+    width: 60%;
+    background-color: #fec43c;
+    white-space: break-spaces;
+    overflow: hidden;
+}
+#myChart{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15rem;
+}

@@ -1,0 +1,19 @@
+#loginbody{
+    background-color: #ddd;
+    /* border: 1px solid black; */
+    box-shadow: 1px 1px #ddd, 0em 0 0.4em 
+}
+.loginButton{
+    width: 25%;
+    margin-top: 1%;
+    background-color: #fec239;
+}
+#header{
+    background-color: #fec239;
+}
+#status{
+    padding: 1rem;
+}
+#feedback{
+    margin-top: 2rem;
+}

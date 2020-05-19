@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="chartTable">
+    <canvas id="myChart" width="700" height="400"></canvas>
+</div>
+<div class="fluid-container checkout-table">
+    <div class="showBox">    
+        <div class="col-sm-12 checkout-table-wrap abcd">
+            <div  class="col-sm-2"><h3>User</h3></div>
+            <div  class="col-sm-2"><h3>Name</h3></div>
+            <div  class="col-sm-3"><h3>Mobile Number</h3></div>
+            <div  class="col-sm-2"><h3>Role</h3></div>
+            <div  class="col-sm-3"><h3>Action</h3></div>
+        </div>
+        <div class="col-sm-12 product-checkout abcd" *ngFor="let user of userList">
+            <div  class="col-sm-2">
+                <img src="../../assets/profile.png" >
+            </div>
+            <div  class="col-sm-2 text-center product-name-wrap"> {{user.firstName|uppercase}} {{user.lastName|uppercase}} </div>
+            <div  class="col-sm-3 text-center product-name-wrap"> {{user.mobileNumber}} </div>
+            <div  class="col-sm-2 text-center product-name-wrap"> {{user.role}} </div>
+            <div  class="col-sm-3 text-center">
+                <i class="fas fa-edit fa-1x" (click)="updateUser(user.userId)"></i>
+                <i class="fas fa-trash fa-1x" (click)="deleteUser(user.userId)"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

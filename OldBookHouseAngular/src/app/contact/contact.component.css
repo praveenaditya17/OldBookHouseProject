@@ -1,0 +1,159 @@
+.content{
+	margin-top: 15rem;
+}
+.contact-distributed{
+	background-color:  white;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 3.125rem 3.125rem 3.125rem 3.125rem;
+	margin-top: 2rem;
+	box-shadow: 2px 2px #ddd, 0rem 0 0.6rem #ddd;
+}
+img{
+	border-radius: 50%;
+	width: 50%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.left{
+	width: 25%;
+	text-align: center;
+}
+
+.contact-distributed .left p{
+	color: #000;
+}
+
+.contact-distributed h3{
+	color:  black;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+.contact-distributed h3 span{
+	color:  #fec239;
+}
+
+.contact-distributed .contact-links{
+	color:  black;
+	margin: 20px 0 12px;
+}
+
+.contact-distributed .contact-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.contact-distributed .contact-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.center{
+	width: 40%;
+}
+
+.contact-distributed .center i{
+	background-color:  #fec239;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.contact-distributed .center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.contact-distributed .center p{
+	display: inline-block;
+	color: black;
+	vertical-align: middle;
+	margin:0;
+}
+
+.contact-distributed .center p span{
+	display:block;
+	font-weight: normal;
+	font-size:1.6rem;
+	line-height:2;
+}
+
+.contact-distributed .center p a{
+	color:  black;
+	text-decoration: none;;
+}
+
+.contact-distributed .right{
+	width: 30%;
+}
+
+.contact-distributed .contact-company-about{
+	line-height: 20px;
+	color:  black;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.contact-distributed .contact-company-about span{
+	display: block;
+	color:  black;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.contact-distributed .contact-icons{
+	margin-top: 25px;
+}
+
+.contact-distributed .contact-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #fec239;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+@media (max-width: 880px) {
+
+	.contact-distributed .left,
+	.contact-distributed .center,
+	.contact-distributed .right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.contact-distributed .center i{
+		margin-left: 0;
+	}
+
+}

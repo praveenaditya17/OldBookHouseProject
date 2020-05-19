@@ -1,0 +1,23 @@
+<div id="loginbody">
+    <mat-toolbar id="header">
+        <span>WelCome For Book Sell</span>
+        <span class="fill-remaining-space"></span>
+        <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabIndex="-1"><mat-icon>clear</mat-icon></button>
+    </mat-toolbar>
+    <form [formGroup]="loginService.form" class="normal-form" (submit)="onSubmit()">
+        <mat-grid-list cols="1" rowHeight="231px">
+            <mat-grid-tile>
+                <div class="controles-container">
+                   <p>Enter Your Book ISBN or Book Title</p>
+                    <mat-form-field>
+                        <input formControlName="bookISBN" matInput>
+                        <mat-error>This field is mandatory.</mat-error>
+                    </mat-form-field>
+                    <div class="d-flex justify-content-center text-center"> 
+                        <button  class="login-button loginButton"  mat-raised-button color="accent" type="submit">Submit</button>
+                    </div>
+                </div>    
+            </mat-grid-tile>
+        </mat-grid-list>    
+    </form> 
+    </div>
